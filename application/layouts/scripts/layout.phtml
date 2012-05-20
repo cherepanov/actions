@@ -1,0 +1,24 @@
+<?=$this->doctype();?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+    <?=$this->headMeta();?>
+    <?=$this->headTitle() ?>
+    <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/3.5.1/build/cssreset/cssreset-min.css">
+    <?=$this->headLink()->appendStylesheet($this->baseUrl().'/css/main.css');?>
+    <?=$this->headLink()->appendStylesheet($this->baseUrl().'/css/popup.css');?>
+    <?=$this->headLink()->appendStylesheet($this->baseUrl().'/css/shake.css');?>
+    <?=$this->jQuery();?>
+    <?=$this->headScript()->appendFile($this->baseUrl().'/js/common.js');?>
+    <!--    TODO: move resource loading into view-->
+    <?=$this->headLink()->appendStylesheet($this->baseUrl().'/css/actions.css');?>
+    <?=$this->headScript()->appendFile($this->baseUrl().'/js/actions.js');?>
+</head>
+<body>
+<div id="header">
+    <div id="logged-in-as"><?=$this->loggedInAs();?></div>
+</div>
+<div id="content">
+    <?=$this->layout()->content;?>
+</div>
+</body>
+</html>
