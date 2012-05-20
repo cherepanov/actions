@@ -7,6 +7,7 @@
     border-width: 5px;
     border-style: solid;
     border-color: #9acd32;
+    text-align: center;
     border-radius: 10px;
     -moz-transition:all 2.0s ease-in-out;
     -o-transition:all 2.0s ease-in-out;
@@ -20,16 +21,18 @@
 }
 
 .popup .message {
-
+    margin-top: 10px;
+    font-weight: bold;
+    width: 100%;
 }
 
 .popup .dismiss {
-    position: relative;
+    position: absolute;
     width: 80px;
     height: 30px;
-    top: 30px;
+    top: 50px;
     left: 105px;
-    background-color: maroon;
+    background-color: #417033;
     border-width: 5px;
     border-style: solid;
     border-color: #9acd32;
@@ -37,11 +40,15 @@
 }
 
 .popup .dismiss:hover {
+    background-color: #305b2d;
     cursor: pointer;
 }
 
+.popup .dismiss:active {
+    top: 52px;
+}
+
 .popup .dismiss:after {
-    position: absolute;
     content: 'OK!';
     font-weight: bold;
     color: white;

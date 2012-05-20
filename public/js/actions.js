@@ -13,6 +13,17 @@ $(function(){
         addStar: addStar
     };
 
+    if($.browser !== "webkit" || $.browser !== "mozilla") {
+        //TODO: implement shake animation
+        $('.action-icon').hover(function() {
+            console.log('TODO: animate');
+        });
+    }
+
+    if($.browser === "ie") {
+        //TODO: implement transition animation
+        //$('.popup');
+    }
     function showMessage(text) {
         var popup = $('#popup')
         ,   message = popup.children('.message')
