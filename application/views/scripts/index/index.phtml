@@ -1,0 +1,20 @@
+<script>
+    Application = {
+        user: []
+    };
+<?php
+    foreach ($this->user as $prop => $val) {
+        echo "Application.user[\"${prop}\"]=\"{$val}\";";
+    }
+?>
+</script>
+<div class="application">
+    <ul class="actions-list">
+        <?php
+            for($i=0, $len=sizeof($this->actions); $i<$len; $i++) {
+                echo '<li>' . $this->createActionIcon($this->actions[$i]) . '</li>';
+            }
+        ?>
+    </ul>
+</div>
+<div id="popup" class="popup"><div class="message"></div><div class="dismiss"></div></div>
